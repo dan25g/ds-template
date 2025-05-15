@@ -31,28 +31,28 @@ const RegisterPage: React.FC = () => {
     let isValid = true;
     
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'El nombre es requerido';
       isValid = false;
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'El correo electrónico es requerido';
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = 'El correo electrónico no es válido';
       isValid = false;
     }
     
     if (!formData.password) {
-      newErrors.password = 'Password is required';
+      newErrors.password = 'La contraseña es requerida';
       isValid = false;
     } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
+      newErrors.password = 'La contraseña debe tener al menos 6 caracteres';
       isValid = false;
     }
     
     if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
+      newErrors.confirmPassword = 'Las contraseñas no coinciden';
       isValid = false;
     }
     
@@ -74,13 +74,13 @@ const RegisterPage: React.FC = () => {
         navigate('/');
       } else {
         setErrors({
-          general: 'Registration failed. Please try again.',
+          general: 'El registro falló. Por favor, inténtalo de nuevo.',
         });
       }
     } catch (error) {
-      console.error('Registration error:', error);
+      console.error('Error de registro:', error);
       setErrors({
-        general: 'An error occurred during registration. Please try again.',
+        general: 'Ocurrió un error durante el registro. Por favor, inténtalo de nuevo.',
       });
     }
   };
@@ -93,12 +93,12 @@ const RegisterPage: React.FC = () => {
             <Gavel className="h-12 w-12 text-purple-600" />
           </div>
           <h2 className="mt-4 text-center text-3xl font-extrabold text-gray-900">
-            Create a new account
+            Crear una nueva cuenta
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Or{' '}
+            O{' '}
             <Link to="/login" className="font-medium text-purple-600 hover:text-purple-500">
-              sign in to your existing account
+              inicia sesión en tu cuenta existente
             </Link>
           </p>
         </div>
@@ -113,7 +113,7 @@ const RegisterPage: React.FC = () => {
             
             <form className="space-y-6" onSubmit={handleSubmit}>
               <Input 
-                label="Full Name"
+                label="Nombre completo"
                 id="name"
                 name="name"
                 type="text"
@@ -125,7 +125,7 @@ const RegisterPage: React.FC = () => {
               />
               
               <Input 
-                label="Email address"
+                label="Correo electrónico"
                 id="email"
                 name="email"
                 type="email"
@@ -137,7 +137,7 @@ const RegisterPage: React.FC = () => {
               />
 
               <Input
-                label="Password"
+                label="Contraseña"
                 id="password"
                 name="password"
                 type="password"
@@ -149,7 +149,7 @@ const RegisterPage: React.FC = () => {
               />
               
               <Input
-                label="Confirm Password"
+                label="Confirmar contraseña"
                 id="confirmPassword"
                 name="confirmPassword"
                 type="password"
@@ -169,13 +169,13 @@ const RegisterPage: React.FC = () => {
                   className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                 />
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-                  I agree to the{' '}
+                  Acepto los{' '}
                   <a href="#" className="font-medium text-purple-600 hover:text-purple-500">
-                    Terms of Service
+                    Términos de Servicio
                   </a>{' '}
-                  and{' '}
+                  y la{' '}
                   <a href="#" className="font-medium text-purple-600 hover:text-purple-500">
-                    Privacy Policy
+                    Política de Privacidad
                   </a>
                 </label>
               </div>
@@ -188,7 +188,7 @@ const RegisterPage: React.FC = () => {
                 className="flex items-center justify-center"
               >
                 <UserPlus className="h-5 w-5 mr-2" />
-                Create Account
+                Crear cuenta
               </Button>
             </form>
 
@@ -198,7 +198,7 @@ const RegisterPage: React.FC = () => {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-white text-gray-500">O continúa con</span>
                 </div>
               </div>
 
@@ -222,8 +222,8 @@ const RegisterPage: React.FC = () => {
               </div>
               
               <p className="mt-6 text-xs text-center text-gray-600">
-                By signing up, you agree to our Terms, Privacy Policy, and Cookie Use. 
-                This site is protected by reCAPTCHA and Google's Privacy Policy and Terms of Service apply.
+                Al registrarte, aceptas nuestros Términos, Política de Privacidad y Uso de Cookies.
+                Este sitio está protegido por reCAPTCHA y se aplican la Política de Privacidad y los Términos de Servicio de Google.
               </p>
             </div>
           </div>

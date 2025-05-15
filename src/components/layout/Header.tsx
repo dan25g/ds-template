@@ -30,11 +30,11 @@ const Header: React.FC = () => {
 
   const navigationItems = [
     { path: '/dashboard', label: 'Dashboard', icon: Activity },
-    { path: '/auctions', label: 'Auctions', icon: Gavel },
-    { path: '/payments', label: 'Payments', icon: CreditCard },
-    { path: '/products', label: 'Products', icon: ShoppingBag },
-    { path: '/reports', label: 'Reports', icon: BarChart2 },
-    { path: '/claims', label: 'Claims', icon: MessageSquare },
+    { path: '/auctions', label: 'Subastas', icon: Gavel },
+    { path: '/payments', label: 'Pagos', icon: CreditCard },
+    { path: '/products', label: 'Productos', icon: ShoppingBag },
+    { path: '/reports', label: 'Reportes', icon: BarChart2 },
+    { path: '/claims', label: 'Reclamos', icon: MessageSquare },
   ];
 
   return (

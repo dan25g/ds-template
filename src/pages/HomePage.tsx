@@ -36,11 +36,11 @@ const HomePage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Discover Unique Items at <span className="text-teal-400">Competitive Prices</span>
+              Descubre Artículos Únicos a <span className="text-teal-400">Precios Competitivos</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              Join thousands of bidders on our secure auction platform. 
-              Find collectibles, art, electronics, and more with new items added daily.
+              Únete a miles de postores en nuestra plataforma segura de subastas.
+              Encuentra coleccionables, arte, electrónica y más con nuevos artículos añadidos diariamente.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button 
@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
                 onClick={() => navigate('/auctions')}
                 className="group"
               >
-                Browse Auctions
+                Explorar Subastas
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
@@ -58,7 +58,7 @@ const HomePage: React.FC = () => {
                 onClick={() => navigate('/register')}
                 className="bg-white/10 hover:bg-white/20 text-white border-white/30"
               >
-                Sign Up Free
+                Regístrate Gratis
               </Button>
             </div>
           </div>
@@ -75,12 +75,12 @@ const HomePage: React.FC = () => {
               </div>
               <input
                 type="text"
-                placeholder="Search for items..."
+                placeholder="Buscar artículos..."
                 className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             <Button variant="primary">
-              Search
+              Buscar
             </Button>
           </div>
         </div>
@@ -90,9 +90,9 @@ const HomePage: React.FC = () => {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Featured Auctions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Subastas Destacadas</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Check out these selected items with active bidding. Don't miss your chance to win!
+              ¡Echa un vistazo a estos artículos seleccionados con pujas activas. ¡No pierdas la oportunidad de ganar!
             </p>
           </div>
           
@@ -114,7 +114,7 @@ const HomePage: React.FC = () => {
                   onClick={() => navigate('/auctions')}
                   className="group"
                 >
-                  View All Auctions
+                  Ver Todas las Subastas
                   <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -127,9 +127,9 @@ const HomePage: React.FC = () => {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Why Choose AuctionHub</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">¿Por qué elegir AuctionHub?</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We provide a secure and user-friendly platform for buyers and sellers.
+              Proporcionamos una plataforma segura y fácil de usar para compradores y vendedores.
             </p>
           </div>
           
@@ -138,9 +138,9 @@ const HomePage: React.FC = () => {
               <div className="inline-flex items-center justify-center p-3 bg-purple-100 rounded-full text-purple-600 mb-4">
                 <Clock className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Bidding</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Pujas en Tiempo Real</h3>
               <p className="text-gray-600">
-                Experience the excitement of live auctions with real-time updates and notifications.
+                Experimenta la emoción de las subastas en vivo con actualizaciones y notificaciones en tiempo real.
               </p>
             </div>
             
@@ -148,9 +148,9 @@ const HomePage: React.FC = () => {
               <div className="inline-flex items-center justify-center p-3 bg-teal-100 rounded-full text-teal-600 mb-4">
                 <Shield className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure Transactions</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Transacciones Seguras</h3>
               <p className="text-gray-600">
-                Our platform ensures safe and secure transactions with buyer and seller protection.
+                Nuestra plataforma garantiza transacciones seguras con protección para compradores y vendedores.
               </p>
             </div>
             
@@ -158,9 +158,9 @@ const HomePage: React.FC = () => {
               <div className="inline-flex items-center justify-center p-3 bg-amber-100 rounded-full text-amber-600 mb-4">
                 <Award className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Garantía de Calidad</h3>
               <p className="text-gray-600">
-                All items are verified and sellers are rated to ensure the best experience.
+                Todos los artículos son verificados y los vendedores son calificados para asegurar la mejor experiencia.
               </p>
             </div>
           </div>
@@ -170,10 +170,10 @@ const HomePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-purple-700 to-indigo-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Bidding?</h2>
+          <h2 className="text-3xl font-bold mb-6">¿Listo para Empezar a Pujar?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of successful bidders and sellers on our platform. 
-            Registration is free and only takes a minute.
+            Únete a miles de postores y vendedores exitosos en nuestra plataforma.
+            El registro es gratuito y solo toma un minuto.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button 
@@ -181,7 +181,7 @@ const HomePage: React.FC = () => {
               size="lg"
               onClick={() => navigate('/register')}
             >
-              Create an Account
+              Crear una Cuenta
             </Button>
             <Button 
               variant="outline" 
@@ -189,7 +189,7 @@ const HomePage: React.FC = () => {
               onClick={() => navigate('/auctions')}
               className="bg-white/10 hover:bg-white/20 text-white border-white/30"
             >
-              Browse Auctions
+              Explorar Subastas
             </Button>
           </div>
         </div>

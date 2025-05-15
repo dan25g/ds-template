@@ -28,18 +28,18 @@ const LoginPage: React.FC = () => {
     let isValid = true;
     
     if (!email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'El correo electrónico es requerido';
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = 'El correo electrónico no es válido';
       isValid = false;
     }
     
     if (!password) {
-      newErrors.password = 'Password is required';
+      newErrors.password = 'La contraseña es requerida';
       isValid = false;
     } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
+      newErrors.password = 'La contraseña debe tener al menos 6 caracteres';
       isValid = false;
     }
     
@@ -61,13 +61,13 @@ const LoginPage: React.FC = () => {
         navigate(fromLocation, { replace: true });
       } else {
         setErrors({
-          general: 'Invalid email or password',
+          general: 'Correo electrónico o contraseña inválidos',
         });
       }
     } catch (error) {
-      console.error('Login error:', error);
+      console.error('Error de inicio de sesión:', error);
       setErrors({
-        general: 'An error occurred during login. Please try again.',
+        general: 'Ocurrió un error durante el inicio de sesión. Por favor, inténtalo de nuevo.',
       });
     }
   };
@@ -80,12 +80,12 @@ const LoginPage: React.FC = () => {
             <Gavel className="h-12 w-12 text-purple-600" />
           </div>
           <h2 className="mt-4 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
+            Inicia sesión en tu cuenta
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Or{' '}
+            O{' '}
             <Link to="/register" className="font-medium text-purple-600 hover:text-purple-500">
-              create a new account
+              crea una nueva cuenta
             </Link>
           </p>
         </div>
@@ -100,7 +100,7 @@ const LoginPage: React.FC = () => {
             
             <form className="space-y-6" onSubmit={handleSubmit}>
               <Input 
-                label="Email address"
+                label="Correo electrónico"
                 id="email"
                 name="email"
                 type="email"
@@ -112,7 +112,7 @@ const LoginPage: React.FC = () => {
               />
 
               <Input
-                label="Password"
+                label="Contraseña"
                 id="password"
                 name="password"
                 type="password"
@@ -132,13 +132,13 @@ const LoginPage: React.FC = () => {
                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                   />
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
+                    Recordarme
                   </label>
                 </div>
 
                 <div className="text-sm">
                   <a href="#" className="font-medium text-purple-600 hover:text-purple-500">
-                    Forgot your password?
+                    ¿Olvidaste tu contraseña?
                   </a>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const LoginPage: React.FC = () => {
                 className="flex items-center justify-center"
               >
                 <LogIn className="h-5 w-5 mr-2" />
-                Sign in
+                Iniciar sesión
               </Button>
             </form>
 
@@ -161,7 +161,7 @@ const LoginPage: React.FC = () => {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-white text-gray-500">O continúa con</span>
                 </div>
               </div>
 
