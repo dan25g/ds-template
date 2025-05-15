@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import LoginPage from './pages/LoginPage';
@@ -25,6 +25,7 @@ import ReportsPage from './pages/ReportsPage';
 import ClaimsPage from './pages/claims/ClaimsPage';
 import SupportClaimsPage from './pages/claims/SupportClaimsPage';
 import AuthProtected from './components/auth/AuthProtected';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<HomePage/>} />
           
           {/* Protected Routes */}
           <Route path="/dashboard" element={
